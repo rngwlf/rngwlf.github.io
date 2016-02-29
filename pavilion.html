@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buffalo Jump Entrance</title>
+    <meta name="description" content="Buffalo Jump Entrance">
+    <script src="js/aframe_dev.js"></script>
+    <script src="js/pavilion.js"></script>
+  </head>
+  <body onload="init()">
+    <a-scene>
+
+      <a-sky src="images/pavilion_large.jpg" rotation="0 -95 0"></a-sky>
+      <a-camera position="0 1.8 4" 
+        cursor-visible="true" cursor-scale="3" cursor-color="red" cursor-offset="2" cursor-maxdistance="100" cursor-opacity="0.6"
+        no-click-look-controls="enabled:false"></a-camera>
+      <a-image id="face" src="images/navigate.svg" width=".5" height=".5" 
+        opacity=".65" 
+        position="1 1.5 1" 
+        cursor="fuse:false; maxDistance:1">
+        <a-animation id="navigate-animation" attribute="rotation" from="0 -15 0" to="0 345 0" dur="5000" fill="backwards" repeat="indefinite" easing="ease-expo" ></a-animation>
+        <a-mouseenter scale="2 2 1" rotato="0 -45 0" ></a-mouseenter>
+        <a-mouseleave scale="1 1 1"></a-mouseleave>
+      </a-image>
+    </a-scene>
+  </body>
+</html>
