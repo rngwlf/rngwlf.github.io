@@ -1,74 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>RunningWolf.io</title>
-	  <!-- Compiled and minified CSS -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+---
+layout: default
+---
 
-  	<!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<div class="home">
 
-  	<!-- Compiled and minified JavaScript -->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <h1 class="page-heading">Posts</h1>
 
-  	<!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
-<body>
-	<nav>
-	    <div class="nav-wrapper light-blue">
-	      <a href="/" class="brand-logo">RunningWolf.io</a>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="vr.html">VR</a></li>
-	        <li><a href="http://buffalotongue.org">BuffaloTongue.org</a></li>
-	        <li><a href="http://cheyennelanguage.us">CheyenneLanguage.us</a></li>
-	      </ul>
-	    </div>
-  	</nav>
-	<div class="container">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-		<h4>Michael Running Wolf</h4>
-		<h5>Professional Software Developer and Life Long Native American</h5>
-		<div class="row">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-			<div class="col s12 m8 offset-m2">
-	          <div class="card">
-	            
-	            <div class="card-content">
-	              <p>My Virtual Reality Experiments and 3D Models</p>
-	            </div>
-	            <div class="card-action">
-	              <a href="vr.html">Link to VR Work</a>
-	            </div>
-	          </div>
-	        </div>
-
-	        <div class="col s12 m6">
-	          <div class="card">
-	            <div class="card-content">
-	              <p>I'm a Co-Founder of Buffalo Tongue, a non-profit whose goal is to create advanced langauge revitalization technology</p>
-	            </div>
-	            <div class="card-action">
-	              <a href="http://buffalotongue.org">Link to BuffaloTongue.org</a>
-	            </div>
-	          </div>
-	        </div>
-
-	        <div class="col s12 m6">
-	          <div class="card">
-	            
-	            <div class="card-content">
-	              <p>I was a contractor for my tribe's, the Northern Cheyenne, language preservation software development.</p>
-	            </div>
-	            <div class="card-action">
-	              <a href="http://cheyennelanguage.us">Link to CheyenneLanguage.us</a>
-	            </div>
-	          </div>
-	        </div>
-      	</div>
-	</div>
-</body>
-</html>
+</div>
