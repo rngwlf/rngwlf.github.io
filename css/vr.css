@@ -1,6 +1,6 @@
 
 
-div#preloaded-images {
+div#preload {
    position: absolute;
    overflow: hidden;
    left: -9999px; 
