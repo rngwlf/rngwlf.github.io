@@ -1,5 +1,9 @@
 function init(){
 	console.log("init");
+
+	var scene = document.querySelector('#scene');
+	var sky = document.querySelector('sky');
+
 	document.querySelector('#face').addEventListener('mouseenter', function () {
 		var element = document.querySelector('#navigate-animation');
 
@@ -13,6 +17,6 @@ function init(){
 
 	document.querySelector('#navigate').addEventListener('click',function(){
 		console.log("click");
-		window.location.href = "pavilion.html"
+		sky.setAttribute("src","images/pavilion_large.jpg");	
 	});
 }
