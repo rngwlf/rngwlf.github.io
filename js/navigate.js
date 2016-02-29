@@ -17,7 +17,7 @@ function init(){
 	document.querySelector('#navigate').addEventListener('click',function(){
 		console.log("click");
 		sky.setAttribute("src","images/pavilion_medium.jpg");
-		this.
+		this.setAttribute("visible",false);
 		//sky.setAttribute("rotation","0 - 95 0");
 	});
 }
