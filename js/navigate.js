@@ -1,4 +1,5 @@
 
+
 function init(){
 	console.log("init");
 	var sky = document.querySelector('#sky');
