@@ -106,7 +106,7 @@ angular.module('buffaloJumpApp',[])
 
 
 		//initialize scene
-		 $scope.scene = scenes.entrance;
+		 $scope.scene = scenes.pavilion;
 
 		
 		$scope.navMouseEnter = function(){
